@@ -1,7 +1,11 @@
+# vim:set ts=8:
 # Filename	| License | Author | Source
 rocket02.wav	| Creative Commons Attribution-Share Alike 3.0 | Christian "Crystan" Hoffmann, UFO:AI, ugv-lasercannon-fire.ogg
 flamloop.wav	| GPLv2 | cheapy | OpenArena 0.8.5, firesoft.wav
 grenad01.wav	| Public Domain | Crack dot Com | Golgotha SFX, old_generic.mp3
 explod02.wav	| Public Domain | Crack dot Com | Golgotha SFX, old_generic.mp3
 logo09.wav	| Public Domain | Crack dot Com | Golgotha SFX, gushing_wind_22khz_lp.wav
+eleacc01.wav	| GPLv2+ | DevUrandom | Warzone2100, hovstart.ogg
+eledec01.wav	| GPLv2+ | DevUrandom | Warzone2100, hovstop.ogg
+zap2.wav	| GPLv2+ | DevUrandom | Warzone2100, plslsr.ogg
 
