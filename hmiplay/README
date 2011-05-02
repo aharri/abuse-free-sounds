@@ -1,0 +1,8 @@
+Standalone HMI player that Abuse uses for music.
+
+Requires:
+
+- SDL
+- SDL-mixer
+- Timidity for software playback of the extracted MIDI
+
