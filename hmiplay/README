@@ -1,4 +1,5 @@
-Standalone HMI player that Abuse uses for music.
+HMI is a MIDI file format that Abuse uses for music playback
+and hmiplay is a standalone player for those files.
 
 Requires:
 
