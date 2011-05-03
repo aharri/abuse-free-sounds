@@ -16,3 +16,17 @@ plpain01.wav	| GPLv2 | Lari Nieminen | Battle for Wesnoth, human-hit-5.ogg
 plpain04.wav	| GPLv2 | Lari Nieminen | Battle for Wesnoth, human-hit-1.ogg
 throw01.wav	| GPLv2 | Lari Nieminen | Battle for Wesnoth, throw-1.wav
 force01.wav	| Public Domain | Antti Harri | N/A
+
+
+The following sound effects have been copied over other files
+as well for the sake of getting at least something other
+than just silence.
+
+Later they should be replaced with their own effects.
+
+plasma02.wav:	plasma03.wav
+zap2.wav:	zap3.wav
+plpain01.wav:	plpain02.wav
+plpain04.wav:	plpain10.wav
+telept01.wav:	endlvl02.wav
+
