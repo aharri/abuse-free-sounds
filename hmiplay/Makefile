@@ -17,4 +17,4 @@ ${TARGET}: ${OBJS}
 	${CC} ${CFLAGS} -c -o $@ ${@:.o=.cpp}
 
 clean:
-	rm -f *.o ${TARGET}
+	rm -f ${OBJS} ${TARGET}
