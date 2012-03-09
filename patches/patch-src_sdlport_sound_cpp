@@ -1,0 +1,60 @@
+$OpenBSD$
+--- src/sdlport/sound.cpp.orig	Mon May  9 10:58:30 2011
++++ src/sdlport/sound.cpp	Wed May 11 17:44:23 2011
+@@ -42,8 +42,10 @@ static SDL_AudioSpec audioObtained;
+ //
+ int sound_init( int argc, char **argv )
+ {
++/*
+     char *sfxdir, *datadir;
+     FILE *fd = NULL;
++*/
+ 
+     // Disable sound if requested.
+     if( flags.nosound )
+@@ -53,6 +55,7 @@ int sound_init( int argc, char **argv )
+         return 0;
+     }
+ 
++/*
+     // Check for the sfx directory, disable sound if we can't find it.
+     datadir = get_filename_prefix();
+     sfxdir = (char *)malloc( strlen( datadir ) + 5 + 1 );
+@@ -64,6 +67,7 @@ int sound_init( int argc, char **argv )
+         return 0;
+     }
+     free( sfxdir );
++*/
+ 
+     if (Mix_OpenAudio(44100, AUDIO_S16SYS, 2, 128) < 0)
+     {
+@@ -109,8 +113,10 @@ sound_effect::sound_effect(char const *filename)
+         return;
+ 
+     jFILE fp(filename, "rb");
+-    if (fp.open_failure())
++    if (fp.open_failure()) {
++        m_chunk=NULL;
+         return;
++    }
+ 
+     void *temp_data = malloc(fp.file_size());
+     fp.read(temp_data, fp.file_size());
+@@ -126,7 +132,7 @@ sound_effect::sound_effect(char const *filename)
+ //
+ sound_effect::~sound_effect()
+ {
+-    if(!sound_enabled)
++    if(!sound_enabled || !m_chunk)
+         return;
+ 
+     // Sound effect deletion only happens on level load, so there
+@@ -152,7 +158,7 @@ sound_effect::~sound_effect()
+ //
+ void sound_effect::play(int volume, int pitch, int panpot)
+ {
+-    if (!sound_enabled)
++    if (!sound_enabled || !m_chunk)
+         return;
+ 
+     int channel = Mix_PlayChannel(-1, m_chunk, 0);

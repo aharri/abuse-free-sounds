@@ -1,0 +1,11 @@
+$OpenBSD$
+--- data/addon/leon/lisp/lmisc.lsp.orig	Mon May 23 20:51:38 2011
++++ data/addon/leon/lisp/lmisc.lsp	Mon May 23 20:52:16 2011
+@@ -36,6 +36,7 @@
+ 		 (if (and (touching_bg) (with_object (bg) (pressing_action_key)))
+ 		     (set_aistate 2)))
+ 	      (2 (set_state running)
++	         (play_sound SAVE_CONS_SND 127 (x) (y))
+ 		 (set_aistate 3))
+ 	      (3 (set_aistate 4))
+ 	      (4
